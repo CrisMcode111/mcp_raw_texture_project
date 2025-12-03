@@ -1,0 +1,11 @@
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part1/part1.ipynb
+suggestions for improvement:
+- The 'plan_step' function uses hardcoded logic for tool selection instead of using the LLM to choose tools and arguments dynamically as specified in the prompt. Implement proper LLM integration to determine the next tool based on the user goal and history.
+- The orchestration in the Streamlit app is also hardcoded, call functions sequentially rather than relying on LLM output to determine the order of steps.
+- Implement error handling for tool calls, including retries or fallback strategies as required.
+- The Streamlit app attempts to start MCP servers directly using subprocesses. Starting processes directly within the Streamlit application is generally not recommended. Consider prompting the user to start the servers manually or use a separate process management tool.
+- Ensure the MCP servers are running locally before the streamlit app is run. Ensure the right ports are assigned and the app is correctly configured.
+- Add Observability: Log each tool call (inputs/outputs summarized; no secrets).
+- Config: env-based setup for LLM backend (Groq or Ollama) and server endpoints.
+Correctness: 60%
+-----
