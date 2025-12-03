@@ -1,0 +1,41 @@
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/__init__.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/agent_client.py
+suggestions for improvement:
+- The code does not implement the core requirements of the mini-project, which includes creating a custom MCP server with at least one non-trivial tool.
+- The code statically calls existing tools rather than dynamically discovering and selecting them using an LLM. This goes against the planning requirement.
+- The code does not support GroqCloud or Ollama via env config.
+- The provided 'servers' are not shown, so the reviewer cannot assess the correctness of custom tools.
+Correctness: 0%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/__init__.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/arxiv_server.py
+suggestions for improvement:
+- The code snippet provides a simple search function and a dictionary to represent available tools. However, it doesn't fulfill any of the requirements outlined in the chapter content. It neither creates an MCP server, nor exposes custom tools, nor combines multiple servers. It also doesn't implement agentic client, use an LLM for planning, or produce an end-to-end outcome for a user task.
+- To align with the chapter's goals, you'd need to build a server (e.g., using Flask or FastAPI), define more substantial tools, integrate it with external MCP servers, and construct an agentic client.
+Correctness: 0%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/notes_server.py
+suggestions for improvement:
+- The provided code only defines a single tool and lacks the necessary server infrastructure to expose it as an MCP server.
+- The code needs to be extended to include a mechanism for discovering and using tools from external MCP servers.
+- The code lacks error handling and input validation, which are important for robustness.
+- The code does not demonstrate how to integrate with an LLM for planning and orchestration of tool calls.
+- Consider using a more robust way to handle security and access control for your tool, as anyone with access to the server can use the write tool.
+- Missing docstrings for the function.
+Correctness: 10.0%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/raw_server.py
+suggestions for improvement:
+- The provided code only defines the server-side tools. A complete solution should also include client-side logic to discover and orchestrate tools from both custom and external servers.
+- The security aspect is not fully addressed. Input validation and sanitization should be implemented to prevent potential vulnerabilities, such as injection attacks or denial-of-service attacks. Consider using appropriate libraries or frameworks to handle security concerns effectively.
+- The code includes tool docstrings, which improve readability. Consider adding type hints to function signatures and return values to further enhance code clarity and maintainability.
+Correctness: 70%
+-----
