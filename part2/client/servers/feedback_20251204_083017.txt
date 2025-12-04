@@ -1,0 +1,27 @@
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/__init__.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/arxiv_server.py
+suggestions for improvement:
+- This code snippet provides a basic search tool, but it doesn't address the core requirements of the mini-project, which involve creating an MCP server, defining custom tools with clear schemas, composing with external servers, and using an LLM for planning.
+- The provided code lacks a proper MCP server implementation, making it impossible to evaluate its integration with other MCP servers or its use in a multi-step orchestration driven by an LLM.
+- The function lacks docstrings and schemas as suggested in the prompt.
+Correctness: 0%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/notes_server.py
+suggestions for improvement:
+- The provided code only implements a single, simple tool. It should implement at least one, ideally two, non-trivial tools with clear input/output schemas.
+- The code doesn't include any MCP server implementation or client implementation as required by the chapter.
+- The tool should add real value (transformation, enrichment, automation, or integration with a service/API). The example provided seems too basic.
+- Consider using a more secure way to handle file paths and content to avoid potential security vulnerabilities.
+Correctness: 30%
+-----
+URL: https://github.com/CrisMcode111/mcp_raw_texture_project/blob/main/part2/client/servers/raw_server.py
+suggestions for improvement:
+- The provided code represents a good starting point for the 'My MCP server' component, but it lacks the actual server implementation (e.g., using Flask, FastAPI, or similar). It only defines the tools themselves.
+- The code lacks input schemas, although it hints at input through function arguments (text: str, keywords). Explicit schemas are required for MCP tools.
+- The 'texture_advice' tool could benefit from more robust input validation to prevent errors when the keyword list is empty or contains unexpected values.
+Correctness: 70%
+-----
